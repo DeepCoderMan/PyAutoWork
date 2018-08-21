@@ -14,9 +14,8 @@
 
 
 #coding=utf-8
-import logging
 import unittest
-
+import logging
 
 class write_log(object):
     

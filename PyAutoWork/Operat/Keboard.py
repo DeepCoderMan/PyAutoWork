@@ -16,9 +16,15 @@
 #coding=utf-8
 from Operat.text_edit import write_log
 
-class Keyboard:
+class Keyboard(object):
 
-    log = write_log.write_log("Keyboard")
+	log = write_log.write_log("Keyboard")
 
-    def __init__(self):
-        log.Debug("")
+	def __init__(self):
+		log.Debug("keboard class instal")
+
+	def _log(self,msg):
+		log.Debug(msg)
+
+	def __Error(self,error):
+		log.Error(error)

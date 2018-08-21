@@ -1,1 +1,1 @@
-__all__ = ["Pack1Class","Pack1Class1"]
+﻿__all__ = ["write_log"]

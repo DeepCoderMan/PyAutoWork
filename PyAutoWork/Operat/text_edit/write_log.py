@@ -1,4 +1,4 @@
-#  ===============================================================================
+﻿#  ===============================================================================
 #  Project Name        :    Autowork
 #  Project Description :
 #  ===============================================================================
@@ -9,7 +9,7 @@
 #  Create Time         :    2018/8/18 15:33:50
 #  Update Time         :    2014/8/18 13:51:50
 #  ===============================================================================
-#  Copyright ? peter 2018 . All rights reserved.
+#  Copyright © peter 2018 . All rights reserved.
 #  ===============================================================================
 
 
@@ -18,13 +18,13 @@ import logging
 import unittest
 
 
-class Keyboard:
+class write_log(object):
     
     _fileName = ""
 
-    def __init__(self,str_filename):
+    def __init__(self,str_filename = "log"):
 
-        _fileName = str_filena
+        _fileName = str_filename
 
         logging.basicConfig(filename='../LOG/'+_fileName+'.log',format='[%(asctime)s-%(filename)s-%(levelname)s:%(message)s]', level = logging.DEBUG,filemode='a',datefmt='%Y-%m-%d%I:%M:%S %p')
 

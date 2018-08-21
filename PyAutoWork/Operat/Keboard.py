@@ -1,4 +1,4 @@
-#  ===============================================================================
+﻿#  ===============================================================================
 #  Project Name        :    Autowork
 #  Project Description :
 #  ===============================================================================
@@ -14,10 +14,11 @@
 
 
 #coding=utf-8
-from text_edit import *
+from Operat.text_edit import write_log
 
 class Keyboard:
-    log = write_log(__name__)
+
+    log = write_log.write_log("Keyboard")
 
     def __init__(self):
-        log.
+        log.Debug("")

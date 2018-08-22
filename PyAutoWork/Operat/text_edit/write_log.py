@@ -40,11 +40,11 @@ class write_log(object):
             if os.path.exists(self._filePath) == False:
                 os.makedirs(self._filePath)
 
-            fp = open(self._fileName,'a+')
+            #fp = open(self._fileName,'a+')
 
-            fp.write("---- Creat log now! -------\n")
+            #fp.write("---- Creat log now! -------\n")
 
-            fp.close()
+            #fp.close()
 
     def Debug(self,str_msg):
         self.__writeLog("Debug",str_msg)

@@ -1,9 +1,12 @@
 #!/user/bin/env python
 #-*- coding: UTF-8 -*-
+import time
 from tkinter import *
 from Operat.text_edit.write_log import write_log
-log = write_log("test")
+from Operat.Keboard import KeyBoard
 
-log.Debug("test debug")
+key = KeyBoard()
+time.sleep(3)
+key.key_input("SSSSSSSSS")
 
 

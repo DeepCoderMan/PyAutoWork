@@ -37,6 +37,9 @@
     <Compile Include="Operat\short_cut_picturn.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Operat\text_edit\logging\config.py" />
+    <Compile Include="Operat\text_edit\logging\handlers.py" />
+    <Compile Include="Operat\text_edit\logging\__init__.py" />
     <Compile Include="Operat\text_edit\write_log.py">
       <SubType>Code</SubType>
     </Compile>
@@ -54,6 +57,7 @@
   <ItemGroup>
     <Folder Include="Operat\" />
     <Folder Include="Operat\text_edit\" />
+    <Folder Include="Operat\text_edit\logging\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

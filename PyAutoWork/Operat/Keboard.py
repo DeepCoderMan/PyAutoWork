@@ -14,11 +14,7 @@
 
 
 #coding=utf-8
-from Operat.text_edit import write_log
+from Operat.text_edit.write_log import *
 
-class Keyboard:
-
-    log = write_log.write_log("Keyboard")
-
-    def __init__(self):
-        log.Debug("")
+#class Keyboard:
+#   def __init__(self):

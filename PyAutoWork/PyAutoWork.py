@@ -7,6 +7,6 @@ from Operat.Keboard import KeyBoard
 
 key = KeyBoard()
 time.sleep(3)
-key.key_input("SSSSSSSSS")
+key.Clicked(key.Key_StrToNum("s"))
 
 

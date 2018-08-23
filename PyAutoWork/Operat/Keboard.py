@@ -13,13 +13,14 @@
 #  ===============================================================================
 
 
-#coding=utf-8
+# coding=utf-8
 import win32api
 import win32con
 import win32gui
 import pythoncom
 import pyHook
 import time
+import win32clipboard
 from ctypes import *
 from Operat.text_edit.write_log import write_log
 
@@ -47,10 +48,10 @@ class KeyBoard(object):
         self._log.Debug(str(key) + " Up")
 
     def Key_NumToStr(self,num):
-        return self._KeyCode_numKey[num]
+        return self._KeyCode_numKey[num].upper()
 
     def Key_StrToNum(self,str):
-        return self._KeyCode_strKey[str]
+        return self._KeyCode_strKey[str.upper()]
 
     #获取鼠标位置
     def cursor_point(self):
@@ -63,7 +64,7 @@ class KeyBoard(object):
             point = (new_x, new_y)
             win32api.SetCursorPos(point)
 
-    #键盘输入文本
+    #键盘输入文本,不支持中文
     def key_input(self, input_words=''):
         for word in input_words:
             win32api.keybd_event(self.Key_StrToNum(word), 0, 0, 0)
@@ -91,8 +92,14 @@ class KeyBoard(object):
             win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
             times -= 1
 
-    #键盘输入事件
-    def key_even(self, input_key):
-        win32api.keybd_event(VK_CODE[input_key], 0, 0, 0)
-        win32api.keybd_event(VK_CODE[input_key], 0, win32con.KEYEVENTF_KEYUP, 0)
-        time.sleep(1)
+    # 写入剪切板 ,并按下ctrl + v
+    def setText(self,aString):  
+        win32clipboard.OpenClipboard()
+        win32clipboard.EmptyClipboard()
+        win32clipboard.SetClipboardData(win32con.CF_UNICODETEXT, aString)
+        win32clipboard.CloseClipboard()
+        self.KeyDown(self.Key_StrToNum("LControlKey"))
+        self.KeyDown(self.Key_StrToNum("V"))
+        time.sleep(0.02)
+        self.KeyUp(self.Key_StrToNum("LControlKey"))
+        self.KeyUp(self.Key_StrToNum("V"))

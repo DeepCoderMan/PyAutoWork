@@ -28,6 +28,9 @@
     <Compile Include="Operat\creat_new_project.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Operat\DatsStruct.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Operat\Keboard.py">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,7 @@
     <Compile Include="PyAutoWork.py" />
   </ItemGroup>
   <ItemGroup>
+    <InterpreterReference Include="{075808fb-3b4d-44ac-b980-1508c424a3f4}\2.7" />
     <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\3.5" />
   </ItemGroup>
   <ItemGroup>

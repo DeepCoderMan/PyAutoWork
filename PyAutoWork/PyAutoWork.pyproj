@@ -25,6 +25,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="MainForm.py" />
     <Compile Include="Operat\creat_new_project.py">
       <SubType>Code</SubType>
     </Compile>

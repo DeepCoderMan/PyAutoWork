@@ -1,10 +1,10 @@
 #!/user/bin/env python
-#-*- coding: UTF-8 -*-
+#-*- coding: utf-8 -*-
 import time
 import datetime
 import tkinter
 import tkinter.filedialog as filedialog
-import MainForm
+from MainForm import *
 from Operat.text_edit.write_log import write_log
 from Operat.Keboard import KeyBoard
 from Operat.short_cut_picturn import ImageProcees
@@ -12,4 +12,11 @@ from Operat.short_cut_picturn import ShotCut
 
 #主程序入口
 
-mainForm = MainForm.MainForm("PyAutoWork",800,600)
+if __name__=="__main__":  
+        app = QApplication(sys.argv)  
+        myWin = MyMainWindow()  
+        myWin.show()  
+        try:
+            app.exec_()  
+        except Exception as e:
+            print(e.message)

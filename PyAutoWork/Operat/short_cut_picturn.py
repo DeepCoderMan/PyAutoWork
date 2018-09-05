@@ -2,7 +2,7 @@
 # coding=utf-8
 import cv2
 import os
-import win32api
+import win32api #pyWin32
 import win32con
 import win32gui
 import pythoncom

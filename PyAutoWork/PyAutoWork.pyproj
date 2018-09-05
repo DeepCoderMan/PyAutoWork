@@ -13,7 +13,8 @@
     <Name>PyAutoWork</Name>
     <RootNamespace>PyAutoWork</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+    <InterpreterId>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,7 +25,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="MainForm.py" />
     <Compile Include="Operat\creat_new_project.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operat\DatsStruct.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Operat\Keboard.py">
@@ -51,7 +56,8 @@
     <Compile Include="PyAutoWork.py" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="Global|PythonCore|3.6" />
+    <InterpreterReference Include="{075808fb-3b4d-44ac-b980-1508c424a3f4}\2.7" />
+    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\3.5" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Operat\" />
@@ -60,7 +66,10 @@
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
        the BeforeBuild and AfterBuild targets below. -->
@@ -69,5 +78,4 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>

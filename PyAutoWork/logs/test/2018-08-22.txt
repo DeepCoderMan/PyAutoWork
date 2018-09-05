@@ -2,3 +2,6 @@
 2018-08-22 11:00:48 [Debug]:test debug
 ---- Creat log now! -------
 2018-08-22 11:01:01 [Debug]:test debug
+---- Creat log now! -------
+2018-08-22 20:49:06 [Debug]:test debug
+2018-08-22 21:04:27 [Debug]:test debug

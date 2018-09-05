@@ -1,0 +1,9 @@
+---- Creat log now! -------
+2018-09-05 16:23:40 [Debug]:test debug
+---- Creat log now! -------
+2018-09-05 16:23:45 [Debug]:test debug
+---- Creat log now! -------
+2018-09-05 16:24:12 [Debug]:test debug
+---- Creat log now! -------
+---- Creat log now! -------
+2018-09-05 16:25:28 [Debug]:test debug
